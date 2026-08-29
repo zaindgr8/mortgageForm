@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const WEBHOOK_URL =
-  "https://n8n.devmatesolutions.com/webhook/72ee76ba-55c1-4623-9eaf-52ecd96679e3";
+  "https://hook.us2.make.com/hovwbcemwqtyyjlcglcme5d4jl7uloop";
 
 export async function POST(request) {
   try {

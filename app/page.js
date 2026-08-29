@@ -58,7 +58,7 @@ export default function Home() {
   // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center p-4">
+      <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4">
         <div className="w-full max-w-md">
           <div className="animate-pulse space-y-8">
             <div className="text-center">
@@ -86,13 +86,13 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
+    <div style={{ minHeight: "100vh", background: "white", display: "flex", flexDirection: "column", padding: "16px" }}>
+      <div style={{ width: "100%", maxWidth: "448px", margin: "0 auto", flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Header */}
           <div className="text-center">
             <h1 className="text-2xl font-light text-black mb-2">
-              DUBAI MORTGAGE- DEMO
+              NY REAL ESTATE- DEMO
             </h1>
             <div className="w-12 h-px bg-black mx-auto"></div>
           </div>
@@ -247,7 +247,34 @@ export default function Home() {
             </div>
           )}
         </form>
+
       </div>
+
+      {/* Footer */}
+      <footer style={{ width: "100%", paddingTop: "24px", paddingBottom: "24px", borderTop: "1px solid #e5e7eb", textAlign: "center" }}>
+        <p style={{ fontSize: "12px", color: "#6b7280", marginBottom: "4px" }}>
+          Powered by{" "}
+          <a
+            href="https://devmatesolutions.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#374151", textDecoration: "underline" }}
+          >
+            devmatesolutions.com
+          </a>
+        </p>
+        <p style={{ fontSize: "12px", color: "#6b7280" }}>
+          Join the AI Movement —{" "}
+          <a
+            href="https://aifounderhub.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#374151", textDecoration: "underline" }}
+          >
+            aifounderhub.com
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
